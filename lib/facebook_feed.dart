@@ -12,6 +12,24 @@ class FaceBookFeed extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      drawer: Drawer(
+        child: Column(
+          children: const [
+            UserAccountsDrawerHeader(
+              currentAccountPicture: CircleAvatar(
+                child: Text('O'),
+              ),
+                accountName:Text('Mohammed jendia') ,
+                accountEmail: Text('mhmed@gmail.com')),
+                 ListTile(
+                   leading: Icon(Icons.home),
+                   trailing: Icon(Icons.arrow_forward_ios),
+                   subtitle: Text('Go to Home'),
+                   title: Text('Home'),
+                 ),
+          ],
+        ),
+      ),
       body:
         SingleChildScrollView(
           child: Column(
